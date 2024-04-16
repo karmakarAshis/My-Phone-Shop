@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme='light'>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Phone Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body>
     <header>
 
     </header>
-    <main>
+    <main class="container mx-auto">
+        <!-- search field -->
+        <section>
+            <div  class="bg-gray-200 p-4 m-4 rounded-xl">
+                <input id="search-field" type="text" placeholder="Search..."
+                    class="input input-bordered w-full max-w-xs " />
+                <button onclick="handleSearchBtn()" class="btn btn-accent">Search</button>
+            </div>
 
+        </section>
+        <!-- search result -->
+        <section>
+            <div id="loading-dots" class="text-center my-40 hidden">
+                <span class="loading loading-dots loading-lg"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 ">
+
+            </div>
+            <!-- show all button -->
+            <div id="show-all-container" class="hidden text-center">
+                <button class="btn btn-accent">Show all</button>
+            </div>
+        </section>
     </main>
     <footer>
-        
+
     </footer>
 </body>
+<script src="scripts/app.js"></script>
+
 </html>
